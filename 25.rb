@@ -19,3 +19,13 @@
 # 
 # What is the first term in the Fibonacci sequence to contain 1000 digits?
 
+f1, f2 = 1, 1
+i = 1
+while f1.to_s.length < 1000
+  # puts f1;
+  f1 += f2;
+  f1, f2 = f2, f1
+  i += 1
+end
+
+puts "f2 (pos, length): #{f2} (#{i}, #{f2.to_s.length})"
